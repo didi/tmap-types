@@ -1,23 +1,25 @@
 # tmap-types
 
-### 简介
+- zh_CN [简体中文](README.zh_CN.md)
 
-腾讯地图 SDK TypeScript 类型声明，供 react-tmap / vue-tmap 地图组件使用
+### Introduction
 
-### 快速开始
+Tencent Maps SDK TypeScript type declaration for react-tmap / vue-tmap map components
 
-#### 安装
+### Quick start
 
-无需手动安装，安装 react-tmap / vue-tmap 组件库会自动安装
+#### Install
 
-### 贡献指南
+No need to install manually, install react-tmap / vue-tmap component library will be installed automatically
 
-> 感谢所有参与贡献的技术爱好者，一起共建好用易用的地图组件库
+### Contribution Guidelines
 
-#### 提交错误
+> Thanks to all the technical enthusiasts who participated in the contribution, let's build an easy-to-use map component library together
 
-请通过 issue 提交错误，详细描述错误复现方式和依赖版本，最好通过在线代码编辑器展示复现代码
+#### Commit bug
 
-#### 提交代码
+Please submit a bug through issue, and describe in detail how to reproduce the error and the version of dependencies. It is best to display the reproduced code through an online code editor.
 
-请通过 pull request 提交您的代码，我们将尽快查看
+#### Submit code
+
+Please submit your code via pull request and we'll take a look soon
