@@ -1,6 +1,6 @@
 {
-  "name": "@didi/tmap-types",
-  "version": "1.0.5",
+  "name": "@map-component/tmap-types",
+  "version": "0.1.0",
   "main": "index.d.js",
   "repository": "",
   "author": "",

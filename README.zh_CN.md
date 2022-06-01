@@ -10,7 +10,7 @@
 
 #### 安装
 
-无需手动安装，安装 react-tmap / vue-tmap 组件库会自动安装
+无需手动安装，安装 @map-component/react-tmap / @map-component/vue-tmap 组件库会自动安装
 
 ### 贡献指南
 
