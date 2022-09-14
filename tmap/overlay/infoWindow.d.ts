@@ -10,6 +10,7 @@ declare namespace TMap {
     content: string; // 信息窗显示内容，默认为空字符串。
     zIndex: number; // 信息窗的z-index值，默认为0。
     offset: Object; // 信息窗相对于position对应像素坐标的偏移量，x方向向右偏移为正值，y方向向下偏移为正值，默认为{x:0, y:0}。
+    enableCustom: boolean;
   }
 
   class InfoWindow extends GeometryOverlay {
