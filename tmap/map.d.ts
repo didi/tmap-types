@@ -172,7 +172,7 @@ declare namespace TMap {
      */
     latLng: LatLng;
     /**
-     * 事件发生时的屏幕位置，返回{x:number, y:number}格式
+     * 事件发生时的屏幕位置，返回 `{x: number, y: number}` 格式
      */
     point: Offset;
     /**
@@ -200,10 +200,10 @@ declare namespace TMap {
     setViewMode(viewMode: ViewMode): this;
     setBaseMap(baseMap: BaseMap | BaseMap[]): this;
     setMapStyleId(mapStyleId: string): this;
-    panTo(latLng: LatLng, opts: EaseOptions): this;
-    zoomTo(zoom: number, opts: EaseOptions): this;
-    rotateTo(rotation: number, opts: EaseOptions): this;
-    pitchTo(pitch: number, opts: EaseOptions): this;
+    panTo(latLng: LatLng, opts?: EaseOptions): this;
+    zoomTo(zoom: number, opts?: EaseOptions): this;
+    rotateTo(rotation: number, opts?: EaseOptions): this;
+    pitchTo(pitch: number, opts?: EaseOptions): this;
     easeTo(
       mapStatus: {
         center: LatLng;
@@ -211,7 +211,7 @@ declare namespace TMap {
         rotation: number;
         pitch: number;
       },
-      opts: EaseOptions
+      opts?: EaseOptions
     ): this;
     fitBounds(bounds: LatLngBounds, options: FitBoundsOptions): this;
     getCenter(): LatLng;
