@@ -1,6 +1,8 @@
 /// <reference path="latLng.d.ts" />
 /// <reference path="control.d.ts" />
+/// <reference path="point.d.ts" />
 /// <reference path="./overlay/geometryOverlay.d.ts" />
+
 declare namespace TMap {
   interface Offset {
     x: number;
@@ -234,8 +236,16 @@ declare namespace TMap {
      */
     destroy(): GeometryOverlay;
     getLayer(id: string): GeometryOverlay;
-    projectToContainer(latLng: LatLng): Offset;
-    unprojectFromContainer(offset: Offset): LatLng;
+    /**
+     * 经纬度坐标转换为容器像素坐标，容器像素坐标系以地图容器左上角点为原点
+     * @param latLng 经纬度坐标
+     */
+    projectToContainer(latLng: LatLng): Point;
+    /**
+     * 容器像素坐标转换为经纬度坐标
+     * @param offset 像素坐标
+     */
+    unprojectFromContainer(pixel: Point): LatLng;
     on(eventName: string, listener: Function): this;
     on(eventName: MapEventName, listener: MapEventListener): this;
     on(eventName: MapOtherEventName, listener: () => void): this;
