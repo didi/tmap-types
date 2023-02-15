@@ -7,10 +7,10 @@ declare namespace TMap {
   interface InfoWindowOptions {
     map: TMap.Map; // （必需）显示信息窗的地图。
     position: LatLng; // （必需）信息窗的经纬度坐标。
-    content: string; // 信息窗显示内容，默认为空字符串。
-    zIndex: number; // 信息窗的z-index值，默认为0。
-    offset: Object; // 信息窗相对于position对应像素坐标的偏移量，x方向向右偏移为正值，y方向向下偏移为正值，默认为{x:0, y:0}。
-    enableCustom: boolean;
+    content?: string; // 信息窗显示内容，默认为空字符串。
+    zIndex?: number; // 信息窗的z-index值，默认为0。
+    offset?: Object; // 信息窗相对于position对应像素坐标的偏移量，x方向向右偏移为正值，y方向向下偏移为正值，默认为{x:0, y:0}。
+    enableCustom?: boolean;
   }
 
   class InfoWindow extends GeometryOverlay {
@@ -31,7 +31,7 @@ declare namespace TMap {
     /**
      * 设置信息窗口所在的map对象，传入null则代表将infoWindow从Map中移除。
      */
-    setMap(map: Map): this;
+    setMap(map: Map | null): this;
     /**
      * 获取信息窗口所在的map对象。
      */

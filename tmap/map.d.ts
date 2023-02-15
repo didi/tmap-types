@@ -1,6 +1,8 @@
 /// <reference path="latLng.d.ts" />
 /// <reference path="control.d.ts" />
+/// <reference path="point.d.ts" />
 /// <reference path="./overlay/geometryOverlay.d.ts" />
+
 declare namespace TMap {
   interface Offset {
     x: number;
@@ -170,7 +172,7 @@ declare namespace TMap {
      */
     latLng: LatLng;
     /**
-     * 事件发生时的屏幕位置，返回{x:number, y:number}格式
+     * 事件发生时的屏幕位置，返回 `{x: number, y: number}` 格式
      */
     point: Offset;
     /**
@@ -198,10 +200,10 @@ declare namespace TMap {
     setViewMode(viewMode: ViewMode): this;
     setBaseMap(baseMap: BaseMap | BaseMap[]): this;
     setMapStyleId(mapStyleId: string): this;
-    panTo(latLng: LatLng, opts: EaseOptions): this;
-    zoomTo(zoom: number, opts: EaseOptions): this;
-    rotateTo(rotation: number, opts: EaseOptions): this;
-    pitchTo(pitch: number, opts: EaseOptions): this;
+    panTo(latLng: LatLng, opts?: EaseOptions): this;
+    zoomTo(zoom: number, opts?: EaseOptions): this;
+    rotateTo(rotation: number, opts?: EaseOptions): this;
+    pitchTo(pitch: number, opts?: EaseOptions): this;
     easeTo(
       mapStatus: {
         center: LatLng;
@@ -209,7 +211,7 @@ declare namespace TMap {
         rotation: number;
         pitch: number;
       },
-      opts: EaseOptions
+      opts?: EaseOptions
     ): this;
     fitBounds(bounds: LatLngBounds, options: FitBoundsOptions): this;
     getCenter(): LatLng;
@@ -234,8 +236,16 @@ declare namespace TMap {
      */
     destroy(): GeometryOverlay;
     getLayer(id: string): GeometryOverlay;
-    projectToContainer(latLng: LatLng): Offset;
-    unprojectFromContainer(offset: Offset): LatLng;
+    /**
+     * 经纬度坐标转换为容器像素坐标，容器像素坐标系以地图容器左上角点为原点
+     * @param latLng 经纬度坐标
+     */
+    projectToContainer(latLng: LatLng): Point;
+    /**
+     * 容器像素坐标转换为经纬度坐标
+     * @param offset 像素坐标
+     */
+    unprojectFromContainer(pixel: Point): LatLng;
     on(eventName: string, listener: Function): this;
     on(eventName: MapEventName, listener: MapEventListener): this;
     on(eventName: MapOtherEventName, listener: () => void): this;
