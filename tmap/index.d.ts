@@ -13,4 +13,5 @@
 /// <reference path="./overlay/domOverlay.d.ts" />
 /// <reference path="./overlay/infoWindow.d.ts" />
 /// <reference path="./overlay/imageGroundLayer.d.ts" />
+/// <reference path="./overlay/service.d.ts" />
 /// <reference path="./tools/geometryEditor.d.ts" />

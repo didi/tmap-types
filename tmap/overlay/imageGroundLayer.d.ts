@@ -28,11 +28,11 @@ declare namespace TMap {
     /** 设置展示图层的地理范围。 */
     setBounds(bounds: LatLngBounds): this;
     /** 设置图层是否可见。 */
-    setVisible(visible: Boolean): this;
+    setVisible(visible: boolean): this;
     /** 设置图层绘制顺序。 */
-    setZIndex(zIndex: Number): this;
+    setZIndex(zIndex: number): this;
     /** 设置图层透明度。 */
-    setOpacity(opacity: Number): this;
+    setOpacity(opacity: number): this;
     /** 更新图层资源路径，相同的url不会被更新。 */
     setSrc(src: String): this;
     /** 获取地图对象，若无返回null。 */
