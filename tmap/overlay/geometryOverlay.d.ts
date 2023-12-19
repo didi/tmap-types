@@ -47,7 +47,7 @@ declare namespace TMap {
     /**
      * 浏览器原生的事件对象。
      */
-    originalEvent: DocumentEvent;
+    originalEvent: MouseEvent | TouchEvent;
   }
 
   type GeometryOverlayEventListener<T extends Geometry> = (
